@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.ctsys.slk.example.entity">
+	<class name="Site" table="site">
+		<id name="sid" column="sid">
+			<generator class="native"></generator>
+		</id>
+		<property name="position"  column="position"></property>
+		<property name="carNum" column="carNum"></property>
+		<property name="type" column="type"></property>
+		<!-- 配置外键 ,不能为空-->
+		<many-to-one name="example" column="e_id" class="Example" not-null="false"></many-to-one>
+	</class>
+</hibernate-mapping>
+

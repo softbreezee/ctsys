@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- 配置登陆过滤器 -->
+	<filter>
+		<!-- 内部名称 -->
+		<filter-name>login_filter</filter-name>
+		<!-- 过滤器类的全名 -->
+		<filter-class>cn.ctsys.core.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<!-- filter内部名称 -->
+		<filter-name>login_filter</filter-name>
+		<!-- 拦截所有资源 -->
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+
+
+	<!-- 配置spring的OpenSessionInView模式 【目的：JSp页面访问懒加载数据】 -->
+	<!-- 注意：访问struts时候需要带上*.action后缀 	-->
+	<filter>
+		<filter-name>OpenSessionInView</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInView</filter-name>
+		<url-pattern>/slk/example_detailUI.action</url-pattern>
+		<url-pattern>/slk/compute_computeUI.action</url-pattern>
+	</filter-mapping>
+	
+	
+
+ 
+ 
+	<!-- struts2配置,核心过滤器 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+
+
+
+
+	<!-- spring配置 ,监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+
+
+	<welcome-file-list>
+		<welcome-file>ctsys.jsp</welcome-file>
+	</welcome-file-list>
+
+
+</web-app>

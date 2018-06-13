@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.ctsys.slk.example.entity">
+	<class name="Example" table="example">
+		<id name="eid" column="eid">
+			<generator class="native"></generator>
+		</id>
+		<property name="ename"  column="ename"></property>
+		<property name="eremark" column="eremark"></property>
+		<property name="date" column="date"></property>
+		<property name="etype" column="etype"></property>
+		<list name="tasks" inverse="false" cascade="all">
+			<key column="e_id"></key>
+			<index column="index_t"></index>
+			<one-to-many class="Task"/>
+		</list>
+		<list name="sites" inverse="false" cascade="all">
+			<key column="e_id"></key>
+			<index column="index_s"></index>
+			<one-to-many class="Site"/>
+		</list>
+	</class>
+</hibernate-mapping>
+

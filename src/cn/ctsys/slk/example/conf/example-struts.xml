@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="example" extends="json-default" namespace="/slk">
+		<global-results>
+			<result name="json" type="json" />
+		</global-results>
+
+		<action name="example_*" class="cn.ctsys.slk.example.action.ExampleAction" method="{1}">
+
+			<result name="listUI">/WEB-INF/jsp/slk/listUI.jsp</result>
+			<result name="computeUI">/WEB-INF/jsp/slk/computeUI.jsp</result>
+			<result name="detailUI">/WEB-INF/jsp/slk/includeDetail.jsp</result>
+			<result name="list" type="redirectAction">example_listUI.action</result>
+			<result name="solveInfo">/WEB-INF/jsp/slk/includeQJCS.jsp</result>
+			<result name="computeRecordUI">/WEB-INF/jsp/slk/includeComputeRecord.jsp</result>
+			
+		</action>
+
+
+		<!-- 单独将随机生成算例的拿出，所有与生成算例相关的操作都在AddAction -->
+		<action name="add_*" class="cn.ctsys.slk.example.action.AddAction" method="{1}">
+			<result name="createUI">/WEB-INF/jsp/slk/randomAddUI.jsp</result>
+			<result name="success" type="redirectAction">example_listUI.action</result>
+			<result name="createDetail">/WEB-INF/jsp/slk/includeAdd.jsp</result>
+			<result name="zyysCondition">/WEB-INF/jsp/slk/addtypesCondition/zyys.jsp</result>
+			<result name="infoupdateCondition">/WEB-INF/jsp/slk/addtypesCondition/infoupdate.jsp</result>
+			<result name="multsizeCondition">/WEB-INF/jsp/slk/addtypesCondition/multsize.jsp</result>
+			
+		</action>
+
+
+
+		<action name="compute_*" class="cn.ctsys.slk.example.action.ComputeAction" method="{1}">
+			<result name="saveResult">/WEB-INF/jsp/space/myspaceUI.jsp</result>
+			<result name="computeUI">/WEB-INF/jsp/slk/includeCompute.jsp</result>
+		</action>
+
+
+	</package>
+
+</struts>

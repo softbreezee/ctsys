@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+validator.Checked=WebRoot/WEB-INF/jsp/loginUI.jsp,WebRoot/js/jquery/jquery-1.10.2.min.js
+validator.Revalidate=true
+validator.Unchecked=

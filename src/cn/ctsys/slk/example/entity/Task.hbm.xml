@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.ctsys.slk.example.entity">
+	<class name="Task" table="task">
+		<id name="tid" column="tid">
+			<generator class="native"></generator>
+		</id>
+		<property name="taskType" column="taskType"></property>
+		<property name="tw1" column="tw1"></property>
+		<property name="tw2" column="tw2"></property>
+		<property name="loadTime" column="loadTime"></property>
+		<many-to-one name="example" class="Example" column="e_id" not-null="false"> </many-to-one>
+		<many-to-one name="start" class="Site" column="start_id" not-null="false"> </many-to-one>
+		<many-to-one name="end" class="Site" column="end_id" not-null="false"> </many-to-one>
+	</class>
+</hibernate-mapping>

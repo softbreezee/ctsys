@@ -1,0 +1,296 @@
+/*
+* @Author: Administrator
+* @Date:   2017-05-02 14:32:06
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-08-06 22:54:22
+*/
+/*----------- initialize---------- */
+body,h1,h2,h3,h4,h5,h6,ul,dl,dd,p {
+	padding: 0;
+	margin: 0;
+}
+
+body,div,p,h1,h2,h3,h4,h5,h6,a,span {
+	font-size: 12px;
+	font-family: "宋体", "微软雅黑";
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: 0 none;
+	outline-style: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/* ---------header------------ */
+.header {
+	width: 980px;
+	height: 62px;
+	/* background: red; */
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header .logo {
+	height: 39px;
+	width: 500px; /* 最好给盒子设上图片的大小 */
+	margin-top: 21px;
+	float: left;
+	font-size: 32px;
+	font-family: "幼圆";
+	font-weight: bold;
+	padding-left: 60px;
+	position: relative;
+}
+
+.logo img {
+	position: absolute;
+	top: -12px;
+	left: 0px;
+}
+
+.header .sreach {
+	margin-top: 21px;
+	float: right;
+}
+
+.sreach_text {
+	width: 165px;
+	height: 26px;
+	border: 1px #ECECEC solid;
+	float: left;
+}
+
+.sreach_but {
+	width: 33px;
+	height: 30px;
+	background: url(../images/style/search2.jpg);
+	float: left;
+	margin-right: 10px;
+	/* position: absolute; */
+}
+
+/* ---------nav--------- */
+.nav {
+	height: 55px;
+	border-top: 1px #E1E1E1 solid;
+	background: url(../images/style/nav_bg.png);
+	text-align: center;
+}
+
+.nav ul {
+	display: inline-block;
+	width: 980px;
+	/* background: red; */
+}
+
+.nav li {
+	height: 55px;
+	line-height: 55px;
+	width: 130px;
+	text-align: center;
+	float: left;
+	background: url(../images/style/nav_bg-line.png) no-repeat right;
+}
+
+.nav a {
+	color: black;
+	font-weight: bold;
+}
+
+.nav a:hover {
+	color: blue;
+}
+
+/* -----------content----------- */
+.content {
+	/* text-align: center; */
+	/*height: 597px;*/
+	width: 980px;
+	margin: 0 auto;
+}
+
+/*---------- nav_2 ---------------*/
+.nav_2 {
+	height: 29px;
+	line-height: 29px;
+	background: #FBFBFB;
+	border-top: 1px #EFEFEF solid;
+	border-bottom: 1px #EFEFEF solid;
+}
+
+.nav_2 .nav_2_text {
+	display: block;
+	width: 980px;
+	height: 29px;
+	left: 50%;
+	margin-left: -490px;
+	margin: 0 auto;
+}
+
+.nav_2_but {
+	float: right;
+	height: 29px;
+}
+
+.nav_2 input {
+	margin-top: 8px;
+}
+
+/* -----------refer---------- */
+.refer {
+	height: 293px;
+	width: 980px;
+	/* text-align: center; */
+	margin: 0 auto;
+}
+
+.products {
+	width: 310px;
+	height: 224px;
+	float: left;
+	border: 1px solid #E4E4E4;
+	margin-top: 15px;
+	position: relative;
+}
+
+.news {
+	width: 372px;
+	height: 224px;
+	margin-left: 12px;
+}
+
+.tech {
+	width: 268px;
+	height: 224px;
+	margin-left: 12px;
+}
+
+.public {
+	float: left;
+	border: 1px solid #E4E4E4;
+	margin-top: 15px;
+	position: relative;
+}
+
+.public .title {
+	margin-top: 14px;
+	height: 24px;
+	line-height: 24px;
+	background: url(../images/style/o.jpg) left no-repeat;
+	position: relative;
+	left: 10px;
+	text-indent: 18px;
+	color: yellowgreen;
+}
+
+.products .pic {
+	width: 205px;
+	height: 194px;
+	/* margin: 0 auto; */
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	margin-left: -102px;
+}
+
+.products .l_tri {
+	width: 11px;
+	height: 19px;
+	background: url(../images/style/left.png);
+	position: absolute;
+	top: 100px;
+	left: 22px;
+}
+
+.products .r_tri {
+	width: 11px;
+	height: 19px;
+	background: url(../images/style/right.png);
+	position: absolute;
+	top: 100px;
+	right: 22px;
+}
+
+.news li {
+	display: block;
+	margin-left: 22px;
+	height: 27px;
+	width: 332px;
+	line-height: 27px;
+	border-bottom: 1px dashed #DCDCDC;
+}
+
+.news a {
+	color: #666666;
+}
+
+.news .sry {
+	font-weight: bold;
+	color: red;
+}
+
+.news a:hover {
+	color: yellowgreen;
+}
+
+.tech .sub {
+	height: 12px;
+	line-height: 12px;
+	border-left: 3px solid yellowgreen;
+	margin-top: 10px;
+	margin-left: 30px;
+	padding-left: 6px;
+}
+
+.tech .last {
+	height: 12px;
+	line-height: 12px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+/*------------- bottom------------ */
+.bottom {
+	height: 90px;
+	background: #2D2D2D;
+	border-top: 1px solid #2D2D2D;
+}
+
+.bottom .message {
+	width: 980px;
+	height: 220px;
+	margin-left: 204px;
+	position: relative;
+}
+
+.bottom dl {
+	margin-top: 16px;
+}
+
+.bottom .one {
+	position: absolute;
+	left: 20px;
+}
+
+.bottom .two {
+	position: absolute;
+	left: 126px;
+}
+
+.bottom .b_b {
+	height: 85px;
+	border-top: 1px dashed #414141;
+	/* position: absolute; */
+	top: 220px;
+}
+
+/* ————————算例表格—————————— */
+
+/* detail */
